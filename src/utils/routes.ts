@@ -5,6 +5,7 @@ export const routes={
     detail:'/detail',
     profile:'/profile',
     api:{
-        profile:'/api/user/profile'
+        profile:'/api/user/profile',
+        login:"/api/user/login"
     }
 }

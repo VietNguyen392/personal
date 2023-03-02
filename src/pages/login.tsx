@@ -13,6 +13,7 @@ import {
 import { useForm,zodResolver } from '@mantine/form';
 import { IconLock, IconMail } from '@tabler/icons-react';
 import { loginShema } from '../utils/validate';
+import { loginUser } from '../services/api';
 const LoginPage = () => {
   const form = useForm({
     initialValues: {
@@ -22,7 +23,7 @@ const LoginPage = () => {
     validate:zodResolver(loginShema)
   });
   const submitLogin = (data: {email:string,password:string}) => {
-    console.log(data);
+    loginUser(data);
   };
   return (
     <Center className="login">
